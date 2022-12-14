@@ -1,0 +1,105 @@
+.searchWrapper {
+  display: flex;
+  align-items: center;
+
+  gap: 5rem;
+
+  .searchBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5rem 0;
+    border-radius: 10px;
+    background-color: white;
+    overflow: hidden;
+
+    input {
+      border: none;
+      outline: none;
+      padding: 2rem;
+      font-size: 2.5rem;
+      font-weight: 500;
+    }
+  }
+
+  .categories {
+    font-size: 2rem;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+
+    .checkboxContainer {
+      display: flex;
+      gap: 0.5rem;
+
+      .checkbox {
+        cursor: pointer;
+        opacity: 0;
+        position: absolute;
+      }
+
+      .checkbox:checked + label::before {
+        background-color: #de9921 !important;
+      }
+
+      .checkbox:checked + label::after {
+        position: absolute;
+        content: "";
+        left: 0.7rem;
+        top: 0.7rem;
+        width: 0.5rem;
+        height: 1rem;
+        border: solid black;
+        border-width: 0 0.25rem 0.25rem 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+
+      label {
+        position: relative;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        color: white;
+      }
+
+      label::before {
+        content: "";
+        width: 1.8rem;
+        height: 1.8rem;
+        border: 1px solid #777;
+        margin-right: 0.6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease-in-out;
+      }
+
+      label:hover::before,
+      .checkbox:hover + label::before {
+        background-color: #facf50;
+      }
+
+      button {
+        padding: 0.5rem 0.75rem;
+        margin-left: 0.5rem;
+        font-size: 1rem;
+        font-weight: 500;
+        background-color: #de9921;
+        border: none;
+        color: black;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+          background-color: #facf50;
+        }
+      }
+    }
+  }
+}

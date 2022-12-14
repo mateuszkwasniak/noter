@@ -1,0 +1,204 @@
+.newNote {
+  position: relative;
+  display: flex;
+  width: 30%;
+  height: 50%;
+  border: 1px solid;
+  background-color: #facf50;
+  z-index: -2;
+
+  .corner {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-left: 0 solid transparent;
+    border-right: 5rem solid transparent;
+    border-bottom: 5rem solid #de9921;
+    z-index: -1;
+  }
+
+  .noteForm {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    input {
+      padding: 2rem;
+      font-size: 2rem;
+      font-weight: 700;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      border-bottom: 2px solid #de9921;
+      &::placeholder {
+        font-weight: 400;
+      }
+    }
+
+    textarea {
+      border: none;
+      outline: none;
+      resize: none;
+      background-color: transparent;
+      padding: 2rem;
+      flex-grow: 1;
+      font-size: 2rem;
+      overflow-y: scroll;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+    .options {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      bottom: -5rem;
+      right: 0;
+
+      p {
+        font-size: 1.5rem;
+        color: rgb(255, 32, 32);
+        font-weight: 500;
+      }
+
+      .optionBtn {
+        padding: 1rem 2rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+        background-color: #de9921;
+        border: none;
+        color: black;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          background-color: #facf50;
+        }
+      }
+    }
+  }
+
+  .categories {
+    position: absolute;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    right: -25rem;
+
+    label {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #facf50;
+    }
+
+    input {
+      outline: none;
+      padding: 1rem;
+      font-size: 2rem;
+      border-radius: 10px;
+      background-color: white;
+    }
+
+    button {
+      padding: 1rem 2rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+      background-color: #de9921;
+      border: none;
+      color: black;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: #facf50;
+      }
+    }
+
+    p {
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: rgb(255, 32, 32);
+    }
+
+    // select {
+    //   width: 20rem;
+    //   right: -50%;
+    //   font-size: 2rem;
+    //   padding: 1rem;
+    //   border-radius: 10px;
+    //   outline: none;
+    //   border: none;
+    //   font-weight: 500;
+    //   background-color: white;
+
+    //   option {
+    //     font-size: 2rem;
+    //   }
+    // }
+
+    .show {
+      display: block !important;
+    }
+
+    .selectContainer {
+      position: relative;
+      width: 100%;
+      background-color: #facf50;
+      height: 5rem;
+      font-size: 2rem;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+
+      .divider {
+        height: 90%;
+        width: 1px;
+        margin: 0 1rem;
+        background-color: #de9921;
+      }
+
+      span {
+        flex: 1;
+      }
+
+      .caret {
+        height: 0;
+        width: 0;
+        border-left: 0.75rem solid transparent;
+        border-right: 0.75rem solid transparent;
+        border-top: 0.751rem solid #de9921;
+        transform: translateY(-50%);
+      }
+
+      .options {
+        position: absolute;
+        text-decoration: none;
+        width: 100%;
+        left: 0;
+        top: 110%;
+        background-color: #facf50;
+        display: none;
+
+        overflow: hidden;
+
+        .option {
+          padding: 1rem;
+        }
+
+        .selected {
+          background-color: #de9921 !important;
+        }
+
+        .highlighted {
+          background-color: #ffdd86;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.notelist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  padding: 10rem 7rem;
+
+  .miniNote {
+    width: 25rem;
+    height: 30rem;
+    border: 2px solid #de9921;
+    background-color: #facf50;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 500;
+      padding: 1rem;
+      border-bottom: 2px solid #de9921;
+    }
+
+    textarea {
+      font-size: 1.5rem;
+      padding: 1rem;
+      border: none;
+      outline: none;
+      resize: none;
+      background-color: transparent;
+      flex-grow: 1;
+    }
+
+    div {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 15rem;
+      background-color: #ffe38f;
+      color: #de9921;
+      transition: all 0.3 ease-in-out;
+    }
+  }
+}

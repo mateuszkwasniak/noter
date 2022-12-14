@@ -1,0 +1,142 @@
+.login {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+
+  .box {
+    position: relative;
+    width: 100rem;
+    height: 65rem;
+    background: #facf50;
+    display: flex;
+    align-items: center;
+
+    .corner {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      border-left: 10rem solid #de9921;
+      border-right: 0 solid transparent;
+      border-bottom: 10rem solid transparent;
+    }
+
+    .separator {
+      height: 90%;
+      width: 1px;
+      background-color: #de9921;
+      opacity: 0.5;
+    }
+
+    .left,
+    .right {
+      padding: 5rem;
+      flex: 1;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .left {
+      h1 {
+        font-size: 10rem;
+        font-weight: 500;
+        letter-spacing: 3px;
+      }
+
+      .hr {
+        width: 20rem;
+        height: 1px;
+        background-color: #de9921;
+        margin-bottom: 2rem;
+        opacity: 0.5;
+      }
+      p {
+        font-size: 2.8rem;
+      }
+
+      img {
+        width: 70%;
+        align-self: flex-end;
+        margin-bottom: 2rem;
+        margin-top: auto;
+      }
+    }
+
+    .right {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h2 {
+        position: absolute;
+        right: 25px;
+        top: 25px;
+        font-size: 3rem;
+        font-weight: 500;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-bottom: 5rem;
+        width: 100%;
+        input {
+          background-color: transparent;
+          padding: 0 0 0.5rem 0.5rem;
+          outline: none;
+          border: none;
+          border-bottom: 1px solid #de9921;
+          font-size: 2rem;
+
+          &::placeholder {
+            opacity: 0.3;
+          }
+        }
+
+        .submitBox {
+          width: 100%;
+          margin-top: 2.5rem;
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: space-between;
+          align-items: center;
+          gap: 4rem;
+
+          .error {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #f73434;
+            text-align: left;
+          }
+
+          .btnSubmit {
+            padding: 0.5rem 2rem;
+            border: 1px solid #de9921;
+            background-color: transparent;
+            font-size: 2rem;
+            font-weight: 500;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .summary {
+        font-size: 2rem;
+        text-align: end;
+        width: 100%;
+
+        a {
+          text-decoration: none;
+          outline: none;
+          color: inherit;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
